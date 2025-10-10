@@ -1,0 +1,329 @@
+/* --- Base --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  height: 100vh;
+  background: url('/images/test.webp') no-repeat center center/cover;
+  background-size: cover; /* couvre tout l'écran */
+  background-attachment: fixed; /* reste fixe pendant le scroll */
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: inherit;
+  
+  filter: blur(8px); /* <-- floute automatiquement */
+  transform: scale(1.1); /* évite les bords nets */
+  z-index: -1;
+}
+
+
+/* --- Navbar --- */
+.navbar {
+  width: 100%;
+  padding: 1.5rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.logo span {
+  color: #6ab4ff;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #6ab4ff;
+}
+
+/* --- Hero Section --- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8rem 10%;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h3 {
+  color: #6ab4ff;
+  font-weight: 600;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+}
+
+.hero-text h2 {
+  font-size: 2rem;
+}
+
+.hero-text h2 span {
+  color: #6ab4ff;
+}
+
+.hero-text p {
+  margin: 1rem 0 2rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.btn.primary {
+  background: #6ab4ff;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: #559adb;
+}
+
+.btn.secondary {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* --- Hero Image --- */
+.hero-image img {
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  transition: transform 0.3s;
+}
+.hero-image {
+  text-align: center; /* centre l'image et le texte */
+}
+
+.hero-image a img {
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.hero-image a img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+}
+
+/* Texte sous l’image */
+.hero-image .caption {
+  margin-top: 0.8rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, #6ab4ff, #00e0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.2rem;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05);
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 6rem 5%;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-image img {
+    width: 80%;
+    max-width: 350px;
+  }
+
+  .navbar ul {
+    gap: 1rem;
+  }
+}
+
+.travaux {
+  padding: 8rem 10% 5rem;
+  text-align: center;
+  color: #fff;
+}
+
+.travaux h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.travaux h1 span {
+  color: #6ab4ff;
+}
+
+.subtitle {
+  color: #ccc;
+  margin-bottom: 3rem;
+}
+
+.projets {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+}
+
+.projet {
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.projet h2 {
+  color: #6ab4ff;
+  margin-bottom: 1rem;
+}
+/* --- CARROUSEL --- */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 600px; /* taille max du carrousel */
+  margin: 0 auto;
+  aspect-ratio: 16 / 9; /* garantit un format stable et responsive */
+  background: #000; /* fond neutre pour les images plus petites */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-track a {
+  flex: 0 0 100%;        /* chaque slide occupe exactement 100% de la largeur */
+  height: 100%;
+  display: block;
+}
+
+.carousel-track img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* remplit tout le cadre, sans bandes */
+  object-position: center; /* garde l’image centrée */
+  display: block;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.carousel-track img:hover {
+  transform: scale(1.03);
+}
+
+/* Boutons */
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background 0.3s;
+  z-index: 2;
+}
+
+.carousel button:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.carousel .prev {
+  left: 10px;
+}
+
+.carousel .next {
+  right: 10px;
+}
+
+
+
+/* Description */
+.projet .desc {
+  color: #ccc;
+  font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+  .projet {
+    padding: 1.5rem;
+  }
+  .carousel button {
+    font-size: 1.5rem;
+  }
+}
