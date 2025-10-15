@@ -454,7 +454,7 @@ textarea.form-control {
 }
 
 .external-link {
-  color: #666;
+  color: #ffffff;
   font-size: 1.2rem;
   text-decoration: none;
 }
@@ -479,5 +479,4 @@ textarea.form-control {
   padding: 0.25rem 0.6rem;
   border-radius: 9999px;
 }
-
 
