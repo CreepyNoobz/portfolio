@@ -10,7 +10,7 @@ body {
   font-family: "Poppins", sans-serif;
   color: white;
   height: 100vh;
-  background: url('/images/test.webp') no-repeat center center/cover;
+  background: url('images/test.webp') no-repeat center center/cover;
   background-size: cover; /* couvre tout l'écran */
   background-attachment: fixed; /* reste fixe pendant le scroll */
   background-repeat: no-repeat;
