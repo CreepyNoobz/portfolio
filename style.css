@@ -1,3 +1,66 @@
+@media (max-width: 700px) {
+  .site-footer {
+    font-size: 0.92rem;
+    padding: 0.8rem 0 0.7rem 0;
+    margin-top: 2rem;
+  }
+  .footer-content {
+    padding: 0 1rem;
+  }
+  .contact-infos {
+    margin-left: 0;
+    max-width: 98vw;
+    padding: 1rem 0.7rem;
+    font-size: 0.98rem;
+  }
+  .contact-infos h2 {
+    font-size: 1.1rem;
+  }
+  .contact-infos li {
+    font-size: 0.98rem;
+  }
+}
+.site-footer {
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  text-align: center;
+  padding: 1.2rem 0 1rem 0;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  font-size: 1rem;
+  z-index: 5;
+  margin-top: 3rem;
+}
+.footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+  opacity: 0.95;
+}
+.contact-infos {
+  margin-left: 60px;
+  margin-top: 2.5rem;
+  padding: 1.5rem 2rem;
+  max-width: 400px;
+  color: #fff;
+}
+.contact-infos h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #6ab4ff;
+}
+.contact-infos ul {
+  list-style: none;
+  padding: 0;
+}
+.contact-infos li {
+  margin-bottom: 0.7rem;
+  font-size: 1.05rem;
+}
+.contact-infos strong {
+  color: #6ab4ff;
+}
 /* --- Base --- */
 * {
   margin: 0;
@@ -335,6 +398,7 @@ body::before {
 }
 
 .contact-info {
+    margin-left: "auto";
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -357,6 +421,10 @@ body::before {
 }
 
 .contact-form {
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90%;
     background-color: rgba(255, 255, 255, 0.05);
     padding: 2.5rem;
     border-radius: 15px;
@@ -480,3 +548,54 @@ textarea.form-control {
   border-radius: 9999px;
 }
 
+.btn-primary{
+  border-color: #000;
+  color: #fff;
+  background-color: #6ab4ff;
+}
+.btn-primary:hover {
+  background: #559adb;
+}
+/* === Système d'étoiles pour compétences === */
+.skill{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin:6px 0;
+}
+
+.skill .name{
+  font-weight:600;
+  flex:1;
+}
+
+.stars{
+  --size: 24px;
+  --gap: 5px;
+  position:relative;
+  display:inline-block;
+  width:calc(var(--size) * 5 + var(--gap) * 4);
+  height:var(--size);
+}
+
+.stars .back,
+.stars .fill{
+  position:absolute;
+  inset:0;
+  display:flex;
+  gap:var(--gap);
+}
+
+.stars svg{
+  width:var(--size);
+  height:var(--size);
+}
+
+.stars .back svg{ fill:#ddd; }
+.stars .fill svg{ fill:#facc15; } /* jaune (modifie ici la couleur des étoiles pleines) */
+
+.stars .fill{
+  overflow:hidden;
+  width:0;
+  transition:width .6s ease;
+}
