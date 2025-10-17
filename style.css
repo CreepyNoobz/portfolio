@@ -461,6 +461,7 @@ textarea.form-control {
   transition: all 0.2s ease;
 }
 
+
 .project-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
@@ -471,10 +472,13 @@ textarea.form-control {
   align-items: center;
   justify-content: space-between;
 }
-
+.card-header p {
+  font-size: 0.9rem;
+}
 .card-header h2 {
   font-size: 1.2rem;
   font-weight: 700;
+  color : #6ab4ff;
 }
 
 .external-link {
@@ -485,7 +489,7 @@ textarea.form-control {
 
 .project-card p {
   margin: 0.8rem 0 1.2rem;
-  color: #555;
+  color: #ffffff;
   line-height: 1.5;
 }
 
@@ -505,7 +509,6 @@ textarea.form-control {
 }
 
 .btn-primary{
-  border-color: #000;
   color: #fff;
   background-color: #6ab4ff;
 }
