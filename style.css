@@ -451,7 +451,7 @@ textarea.form-control {
 }
 
 .project-card {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 1rem;
@@ -572,7 +572,7 @@ textarea.form-control {
 }
 
 .project-card {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.163);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 1rem;
@@ -597,6 +597,85 @@ textarea.form-control {
 }
 
 
+.btn,
+.btn-primary {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.skills-block{
+  margin-left: 5%;
+  margin-top: 2.5rem;
+  padding: 1.5rem 2rem;
+  max-width: 400px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  color: #fff;
+  margin-bottom: 1%;
+}
+.info-block{
+  margin-left: 5%;
+  margin-top: 2.5rem;
+  padding: 1.5rem 2rem;
+  max-width: 400px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  color: #fff;
+  margin-bottom: 1%;
+}
+.skills-info-container {
+  display: flex;
+  gap: 2rem; /* espace entre les deux blocs */
+  flex-wrap: wrap; /* permet de passer en colonne sur mobile */
+  margin-top: 2rem;
+}
+
+.skills-info-container {
+  display: flex;
+  justify-content: center; /* centre le tout */
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap; /* permet de s’adapter sur mobile */
+  margin-top: 2rem;
+}
+
+/* Les blocs eux-mêmes */
+.skills-info-container {
+  display: flex;
+  justify-content: center; /* centre les blocs horizontalement */
+  align-items: flex-start;
+  gap: 2rem; /* espace entre les blocs */
+  flex-wrap: wrap; /* permet le passage en colonne sur mobile */
+  margin-top: 2rem;
+}
+
+.skills-block,
+.info-block {
+  flex: 1 1 350px; /* largeur flexible, minimum 350px */
+  max-width: 420px;
+  background-color: rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  color: #fff;
+  padding: 1.5rem 2rem;
+  box-sizing: border-box;
+}
+
+/* Responsive : passe en colonne sous 850px */
+@media (max-width: 850px) {
+  .skills-info-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills-block,
+  .info-block {
+    max-width: 90%;
+  }
+}
 
 
 
