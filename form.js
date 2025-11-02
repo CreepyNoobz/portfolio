@@ -1,24 +1,35 @@
-document.addEventListener('DOMContentLoaded', function() {
+(function(){
   const form = document.getElementById('form');
+  const btn = document.getElementById('submitBtn');
+  const msg = document.getElementById('formMessage');
+  
+  if (!form || !btn || !msg) {
+    console.error("Un ou plusieurs éléments n'ont pas été trouvés");
+    return;
+  }
 
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-
+  form.addEventListener('submit', async function(e){
+    e.preventDefault(); // empêche la redirection par défaut
+    btn.disabled = true;
     const formData = new FormData(form);
-
-    fetch(form.action, {
-      method: 'POST',
+    
+    try {
+      const response = await fetch(form.action, {
+      method: form.method,
       body: formData,
       headers: { 'Accept': 'application/json' }
-    }).then(response => {
+      });
       if (response.ok) {
-        alert('Merci pour votre message ! Je vous répondrai rapidement.');
-        form.reset();
+      alert('Message envoyé avec succès !');
+      form.reset();
       } else {
-        alert('Une erreur est survenue, veuillez réessayer.');
+      alert('Une erreur est survenue. Veuillez réessayer.');
       }
-    }).catch(() => {
-      alert('Une erreur réseau est survenue, veuillez réessayer.');
-    });
+    } catch (err) {
+      alert('Erreur réseau. Réessayez plus tard.');
+    } finally {
+      btn.disabled = false;
+      msg.textContent = '';
+    }
   });
-});
+})();
