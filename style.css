@@ -137,8 +137,15 @@ body::after {
 }
 
 .hero-text h3 {
+  border-color: black;
+  border-radius: 10%;
   color: #6ab4ff;
   font-weight: 600;
+  text-shadow:
+    1px 1px 0 #222,
+    -1px -1px 0 #222,
+    1px -1px 0 #222,
+    -1px 1px 0 #222;
 }
 
 .hero-text h1 {
