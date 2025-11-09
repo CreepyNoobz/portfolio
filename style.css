@@ -602,7 +602,11 @@ textarea.form-control {
     font-size: 0.98rem;
   }
 }
-
+@media (max-width: 700px) {
+  body {
+    padding-top: 80px; /* adapte si la navbar est moins haute/padding différent */
+  }
+}
 /* Projects grid responsive breakpoint */
 @media (max-width: 1000px) {
   .projects-grid {
