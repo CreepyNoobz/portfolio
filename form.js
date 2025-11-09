@@ -20,7 +20,7 @@
       headers: { 'Accept': 'application/json' }
       });
       if (response.ok) {
-      alert('Message envoyé avec succès !');
+      alert('Votre message à été envoyé avec succès !');
       form.reset();
       } else {
       alert('Une erreur est survenue. Veuillez réessayer.');
