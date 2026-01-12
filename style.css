@@ -5,16 +5,18 @@
   gap: 2.5rem;
   margin: 3rem 0 2rem 0;
 }
+
 .travail-slot {
-  background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
   border-radius: 16px;
   padding: 1.2rem 1rem 1.5rem 1rem;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
 }
+
 .travail-title {
   font-size: 1.15rem;
   font-weight: 700;
@@ -22,19 +24,22 @@
   margin-bottom: 0.7rem;
   text-align: center;
 }
+
 .travail-img {
   width: 100%;
   max-width: 220px;
   border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
   margin-bottom: 0.7rem;
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
 }
+
 .travail-img:hover {
   transform: scale(1.05);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.28);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
 }
+
 .travail-desc {
   color: #ccc;
   font-size: 0.98rem;
@@ -50,6 +55,8 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   font-family: "Poppins", sans-serif;
   color: white;
@@ -78,7 +85,7 @@ body::after {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.13);
+  background: rgba(0, 0, 0, 0.13);
   z-index: -1;
 }
 
@@ -202,10 +209,7 @@ body::after {
   background: rgba(255, 255, 255, 0.1);
 }
 
-/* --- Hero Image --- */
-.hero-image {
-  text-align: center;
-}
+
 
 .hero-image img {
   width: 300px;
@@ -220,14 +224,14 @@ body::after {
 .hero-image a img {
   width: 300px;
   border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
 }
 
 .hero-image a img:hover {
   transform: scale(1.05);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
 }
 
 /* Texte sous l’image */
@@ -318,7 +322,8 @@ body::after {
   margin-top: auto;
   margin-left: auto;
   margin-right: auto;
-  max-width: 90%;
+  min-width: 90%;
+
   background-color: rgba(0, 0, 0, 0.15);
   padding: 2.5rem;
   border-radius: 15px;
@@ -409,9 +414,11 @@ textarea.form-control {
   align-items: center;
   justify-content: space-between;
 }
+
 .card-header p {
   font-size: 0.9rem;
 }
+
 .card-header h2 {
   font-size: 1.2rem;
   font-weight: 700;
@@ -458,53 +465,32 @@ textarea.form-control {
   color: #fff;
   background-color: #6ab4ff;
 }
+
 .btn-primary:hover {
   background: #559adb;
 }
 
 /* === Système d'étoiles pour compétences === */
 .skill {
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  margin:6px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 6px 0;
 }
 
 .skill .name {
-  font-weight:600;
-  flex:1;
+  font-weight: 600;
+  flex: 1;
 }
 
-.stars {
-  --size: 24px;
-  --gap: 5px;
-  position:relative;
-  display:inline-block;
-  width:calc(var(--size) * 5 + var(--gap) * 4);
-  height:var(--size);
-}
 
-.stars .back,
-.stars .fill {
-  position:absolute;
-  inset:0;
-  display:flex;
-  gap:var(--gap);
-}
 
-.stars svg {
-  width:var(--size);
-  height:var(--size);
-}
 
-.stars .back svg { fill:#ddd; }
-.stars .fill svg { fill:#facc15; } /* couleur des étoiles pleines */
 
-.stars .fill {
-  overflow:hidden;
-  width:0;
-  transition:width .6s ease;
-}
+
+
+
+
 
 /* Skills & Info blocks */
 .skills-block,
@@ -522,67 +508,9 @@ textarea.form-control {
   margin-bottom: 1%;
 }
 
-.skills-info-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin-top: 2rem;
-}
 
-/* Responsive : passe en colonne sous 850px */
-@media (max-width: 850px) {
-  .skills-info-container {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .skills-block,
-  .info-block {
-    max-width: 90%;
-    margin-left: 0;
-  }
-}
 
-/* Navbar responsive */
-@media (max-width: 700px) {
-  .navbar {
-    flex-direction: row;
-    align-items: center;
-    height: 60px;
-    padding: 0 2vw;
-    width: 100vw;
-    min-height: unset;
-  }
-  .logo {
-    font-size: 1.1rem;
-    margin-right: 1.2rem;
-    margin-bottom: 0;
-    margin-left: 0;
-    align-self: center;
-  }
-  .navbar ul {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1.1rem;
-    width: auto;
-    margin: 0;
-    padding: 0;
-  }
-  .navbar li {
-    width: auto;
-    min-width: 50px;
-  }
-  .navbar a {
-    font-size: 0.99rem;
-    padding: 0.3rem 0.15rem;
-    white-space: nowrap;
-    text-align: center;
-    display: block;
-  }
-}
 
 
 
@@ -604,7 +532,7 @@ img {
 /* Footer */
 .site-footer {
   width: 100%;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
   color: #fff;
   text-align: center;
   padding: 1.2rem 0 1rem 0;
@@ -615,12 +543,17 @@ img {
   z-index: 5;
   margin-top: 3rem;
 }
-
-.footer-content {
-  max-width: 900px;
-  margin: 0 auto;
-  opacity: 0.95;
+html, body {
+  height: 100%;
+  margin: 0;
 }
+
+
+
+main {
+  flex: 1;
+}
+
 
 /* Contact infos */
 .contact-infos {
@@ -640,6 +573,62 @@ img {
   margin-bottom: 1rem;
   color: #6ab4ff;
 }
-.contact-infos ul { list-style: none; padding: 0; }
-.contact-infos li { margin-bottom: 0.7rem; font-size: 1.05rem; }
-.contact-infos strong { color: #6ab4ff; }
+
+.contact-infos ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-infos li {
+  margin-bottom: 0.7rem;
+  font-size: 1.05rem;
+}
+
+.contact-infos strong {
+  color: #6ab4ff;
+}
+/* === Contact layout === */
+.contact-section {
+  margin-top: 100px;
+  padding: 0 5%;
+}
+
+.contact-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.contact-top {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Nouvelle div à droite */
+.contact-extra {
+  max-width: 400px;
+  padding: 1.5rem 2rem;
+  border-radius: 15px;
+  background: rgba(0,0,0,0.15);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+.contact-extra h2 {
+  color: #6ab4ff;
+  margin-bottom: 1rem;
+}
+@media (max-width: 900px) {
+  .contact-top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-infos,
+  .contact-extra {
+    max-width: 90%;
+  }
+}

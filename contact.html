@@ -20,22 +20,39 @@
       </ul>
     </nav>
   </header>
-  <section style="margin-top: 80px;">
-    <div>
-      <h1 style="text-align: center; font-size: 2.5rem;">Contacts</h1>
-    </div>
-    <div class="contact-infos">
+  <section class="contact-section">
+  <h1 class="contact-title">Contacts</h1>
+
+  <!-- Ligne du haut -->
+  <div class="contact-top">
+
+    <div class="contact-infos" style="min-width: 45%; margin-top:auto;">
       <h2>Informations de contact</h2>
       <ul>
         <li><strong>Téléphone :</strong> +33 7 67 81 70 15</li>
         <li><strong>Email :</strong> kilyandubois358@gmail.com</li>
-        <li><strong>Mobilité :</strong> Permis B, Mobilité : Arras, Avion, Douai, Lens,  Lille, Maubeuge </li>
+        <li><strong>Mobilité :</strong> Permis B, Arras, Douai, Lens, Lille</li>
         <li><strong>Ville :</strong> Fouquières-lès-Lens 62740</li>
       </ul>
     </div>
-  </section>
-    <div class="contact-form">
-               <form id="form" action="https://formspree.io/f/xanppkek" method="POST">
+
+    <!-- 🆕 NOUVELLE DIV À DROITE -->
+ <div class="contact-extra" style="min-width: 20%; min-height: 215px;">
+  <h2>Réseaux</h2>
+  <div style="display: flex; gap: 10px;">
+    <a href="https://www.linkedin.com/in/kilyan-dubois/">
+      <img src="images/linkedin-logo-linkedin-icon-transparent-free-png.webp" alt="Linkedin" style="width:100px; height:100px;">
+    </a>
+    <a href="https://github.com/CreepyNoobz">
+      <img src="images/GitHub_Invertocat_Logo.svg" alt="Github" style="width:100px; height:100px;">
+    </a>
+  </div>
+</div>
+  </div>
+
+  <!-- Formulaire en dessous -->
+  <div class="contact-form">
+    <form id="form" action="https://formspree.io/f/xanppkek" method="POST">
   <div class="form-group">
     <input type="text" name="Nom" class="form-control" placeholder="Nom" required>
   </div>
@@ -55,7 +72,10 @@
   <div>
     <button type="submit" class="btn btn-primary" style="border-color: #6ab4ff;" id="submitBtn">Envoyer un message</button>
   </div>
-  <div id="formMessage" style="margin-top:10px;color:#333;"></div>
+  <div id="formMessage" style="margin-top:10px;color:#333;"></div>  </div>
+</section>
+
+    
 
   <script src="form.js">
   </script>
